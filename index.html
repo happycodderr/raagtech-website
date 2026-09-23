@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAAG TECH LTD</title>
+<meta name="description" content="RAAG TECH LTD — creators of Readico, a medication reminder, symptom tracking and doctor visit prep app.">
+<style>
+  :root {
+    --bg: #fafaf8;
+    --surface: #ffffff;
+    --text: #1c1c1e;
+    --text-secondary: #55555a;
+    --border: #e6e6e2;
+    --accent: #2f6f5e;
+    --accent-soft: #e7f2ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --surface: #1c1f24;
+      --text: #f2f2f0;
+      --text-secondary: #a8aab0;
+      --border: #2a2d33;
+      --accent: #6fcbb0;
+      --accent-soft: #1f2e29;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    padding: 28px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: var(--accent); }
+  nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 0.95rem;
+  }
+  nav a:hover { color: var(--accent); }
+
+  .hero {
+    max-width: 760px;
+    margin: 60px auto 40px;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+  .hero p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 28px;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  .card p { color: var(--text-secondary); }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  @media (max-width: 560px) {
+    .features { grid-template-columns: 1fr; }
+  }
+  .feature {
+    padding: 16px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+  }
+  .feature h3 {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+  .feature p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  footer {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  .contact-btn {
+    display: inline-block;
+    margin-top: 8px;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">RAAG<span>TECH</span></div>
+  <nav>
+    <a href="#readico">Readico</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge">RAAG TECH LTD · Company No. 17463581</div>
+  <h1>Technology that helps people take better care of themselves</h1>
+  <p>We build simple, considerate software for the moments that matter most — starting with how people manage their health day to day.</p>
+</div>
+
+<section id="readico">
+  <div class="card">
+    <h2>Readico</h2>
+    <p>Medication reminders, symptom tracking, and doctor visit prep — all in one place. Built for anyone managing ongoing health conditions, and for the people who care for them.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Medication Reminders</h3>
+        <p>Timely, reliable nudges so a dose never gets missed by accident.</p>
+      </div>
+      <div class="feature">
+        <h3>Adherence Tracking</h3>
+        <p>A clear picture of what's been taken, skipped, or missed over time.</p>
+      </div>
+      <div class="feature">
+        <h3>Symptom Logging</h3>
+        <p>Log how you're feeling, with a voice check-in that makes it effortless.</p>
+      </div>
+      <div class="feature">
+        <h3>Doctor Visit Prep</h3>
+        <p>A ready-made summary to bring to every appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="card">
+    <h2>About RAAG TECH</h2>
+    <p>RAAG TECH LTD is a UK-registered private limited company (Company No. 17463581, incorporated 16 September 2026), building Readico as its first product. We're a small, focused team designing for people who deserve technology that's genuinely easy to use — not just technically capable.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Questions, feedback, or press enquiries — we'd love to hear from you.</p>
+    <a class="contact-btn" href="mailto:geethanjaligk.dev@gmail.com">geethanjaligk.dev@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 RAAG TECH LTD. All rights reserved. Registered in England and Wales.
+</footer>
+
+</body>
+</html>
