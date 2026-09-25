@@ -148,6 +148,33 @@
     font-weight: 600;
     font-size: 0.95rem;
   }
+
+  .download-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .store-btn {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 200px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    background: var(--accent);
+    color: #fff;
+    line-height: 1.25;
+  }
+  .store-btn small { font-size: 0.72rem; opacity: 0.85; }
+  .store-btn strong { font-size: 1.05rem; }
+  .store-btn.soon {
+    background: var(--accent-soft);
+    color: var(--text-secondary);
+    cursor: default;
+    border: 1px dashed var(--border);
+  }
 </style>
 </head>
 <body>
@@ -156,6 +183,7 @@
   <div class="logo">RAAG<span>TECH</span></div>
   <nav>
     <a href="#readico">Readico</a>
+    <a href="#download">Download</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -188,6 +216,23 @@
         <h3>Doctor Visit Prep</h3>
         <p>A ready-made summary to bring to every appointment.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="card">
+    <h2>Get Readico</h2>
+    <p>Free to download. Available now on iPhone, with Android on the way.</p>
+    <div class="download-row">
+      <a class="store-btn" href="https://apps.apple.com/us/app/readico/id6802690472" target="_blank" rel="noopener">
+        <small>Download on the</small>
+        <strong>App Store</strong>
+      </a>
+      <span class="store-btn soon">
+        <small>Coming soon to</small>
+        <strong>Google Play</strong>
+      </span>
     </div>
   </div>
 </section>
