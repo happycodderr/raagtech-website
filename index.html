@@ -5,256 +5,146 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAAG TECH LTD</title>
-<meta name="description" content="RAAG TECH LTD — creators of Readico, a medication reminder, symptom tracking and doctor visit prep app.">
-<style>
-  :root {
-    --bg: #fafaf8;
-    --surface: #ffffff;
-    --text: #1c1c1e;
-    --text-secondary: #55555a;
-    --border: #e6e6e2;
-    --accent: #2f6f5e;
-    --accent-soft: #e7f2ee;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14161a;
-      --surface: #1c1f24;
-      --text: #f2f2f0;
-      --text-secondary: #a8aab0;
-      --border: #2a2d33;
-      --accent: #6fcbb0;
-      --accent-soft: #1f2e29;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    padding: 28px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .logo {
-    font-weight: 700;
-    font-size: 1.15rem;
-    letter-spacing: 0.02em;
-  }
-  .logo span { color: var(--accent); }
-  nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin-left: 24px;
-    font-size: 0.95rem;
-  }
-  nav a:hover { color: var(--accent); }
-
-  .hero {
-    max-width: 760px;
-    margin: 60px auto 40px;
-    padding: 0 24px;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: 2.4rem;
-    margin-bottom: 16px;
-    letter-spacing: -0.01em;
-  }
-  .hero p {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    margin-bottom: 28px;
-  }
-  .badge {
-    display: inline-block;
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-
-  section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 24px;
-  }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
-    margin-bottom: 24px;
-  }
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
-  .card p { color: var(--text-secondary); }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-top: 20px;
-  }
-  @media (max-width: 560px) {
-    .features { grid-template-columns: 1fr; }
-  }
-  .feature {
-    padding: 16px;
-    border-radius: 12px;
-    background: var(--accent-soft);
-  }
-  .feature h3 {
-    margin: 0 0 6px;
-    font-size: 1rem;
-    color: var(--accent);
-  }
-  .feature p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-  }
-
-  footer {
-    max-width: 800px;
-    margin: 40px auto 0;
-    padding: 24px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-  }
-  footer a { color: var(--accent); text-decoration: none; }
-
-  .contact-btn {
-    display: inline-block;
-    margin-top: 8px;
-    background: var(--accent);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .download-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 16px;
-  }
-  .store-btn {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 200px;
-    padding: 10px 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    background: var(--accent);
-    color: #fff;
-    line-height: 1.25;
-  }
-  .store-btn small { font-size: 0.72rem; opacity: 0.85; }
-  .store-btn strong { font-size: 1.05rem; }
-  .store-btn.soon {
-    background: var(--accent-soft);
-    color: var(--text-secondary);
-    cursor: default;
-    border: 1px dashed var(--border);
-  }
-</style>
+<meta name="description" content="RAAG TECH LTD — creators of Readico, a voice-first medication reminder, symptom tracking and doctor visit summary app.">
+<meta name="theme-color" content="#142A52">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="alternate icon" type="image/png" href="assets/readico-icon.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">RAAG<span>TECH</span></div>
-  <nav>
-    <a href="#readico">Readico</a>
-    <a href="#download">Download</a>
-    <a href="/doctors.html">For doctors</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<div class="top">
+  <header class="bar">
+    <a class="logo" href="/" aria-label="RAAG TECH home"><img src="assets/logo-dark.svg" alt="RAAG TECH" height="84"></a>
+    <nav class="menu">
+      <a href="#readico">Readico</a>
+      <a href="#how">How it works</a>
+      <a href="doctors.html">For doctors</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="hero">
-  <div class="badge">RAAG TECH LTD</div>
-  <h1>Technology that helps people take better care of themselves</h1>
-  <p>We build simple, considerate software for the moments that matter most — starting with how people manage their health day to day.</p>
+  <div class="wrap hero">
+    <div>
+      <span class="pill">Now on iPhone &middot; Android coming soon</span>
+      <h1>Take your medicines with confidence.</h1>
+      <p class="lead">Readico is a voice-first companion for medicines, symptoms and doctor visits. Simple enough for anyone, helpful for the people who look after them.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://apps.apple.com/us/app/readico/id6802690472" target="_blank" rel="noopener">
+          <small>Download on the</small>
+          <strong>App Store</strong>
+        </a>
+        <span class="btn ghost">
+          <small>Coming soon to</small>
+          <strong>Google Play</strong>
+        </span>
+      </div>
+    </div>
+
+    <div class="phone" role="img" aria-label="Readico on a phone: Readico asks whether you have taken your Metformin, with a clear Yes button, and below it shows the next dose due this evening.">
+      <div class="screen">
+        <div class="hi">Good morning, Sam</div>
+        <div class="date">Thursday 15 October</div>
+        <div class="voice">
+          <div class="lab"><span class="dot"></span>Readico is asking</div>
+          <div class="q">Have you taken your Metformin 500 mg, before food?</div>
+          <div class="row"><span class="yes">Yes, I took it</span><span class="no">Not yet</span></div>
+        </div>
+        <div class="mini">
+          <b>Atorvastatin</b><span class="t">5:30 PM</span>
+          <div class="d">10 mg &middot; after food</div>
+          <span class="chip">Due this evening</span>
+        </div>
+        <div class="next"><b>Nothing due right now</b><span>Next: 5:30 PM, Atorvastatin</span></div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<section id="readico">
-  <div class="card">
+<section class="block" id="readico">
+  <div class="wrap">
     <h2>Readico</h2>
-    <p>Medication reminders, symptom tracking, and doctor visit prep — all in one place. Built for anyone managing ongoing health conditions, and for the people who care for them.</p>
-    <div class="features">
-      <div class="feature">
-        <h3>Medication Reminders</h3>
-        <p>Timely, reliable nudges so a dose never gets missed by accident.</p>
+    <p class="sub">Everything you need to stay on top of your medicines, in one calm, clear place.</p>
+    <div class="grid4">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F3A6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
+        <h3>Reminders that keep going</h3>
+        <p>Gentle nudges at the times you choose, until a dose is marked taken or skipped.</p>
       </div>
-      <div class="feature">
-        <h3>Adherence Tracking</h3>
-        <p>A clear picture of what's been taken, skipped, or missed over time.</p>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F3A6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-45 12 12)"/><path d="m8.5 8.5 7 7"/></svg></div>
+        <h3>The right dose, every time</h3>
+        <p>See the strength of each dose, and whether it is before or after food, right where you need it.</p>
       </div>
-      <div class="feature">
-        <h3>Symptom Logging</h3>
-        <p>Log how you're feeling, with a voice check-in that makes it effortless.</p>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F3A6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+        <h3>Talk instead of typing</h3>
+        <p>A friendly voice check-in asks about your doses and how you feel. Answer with your voice or a tap.</p>
       </div>
-      <div class="feature">
-        <h3>Doctor Visit Prep</h3>
-        <p>A ready-made summary to bring to every appointment.</p>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#1F3A6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div>
+        <h3>A summary for your doctor</h3>
+        <p>One clear summary of your medicines, doses and symptoms to bring to every appointment.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="download">
-  <div class="card">
-    <h2>Get Readico</h2>
-    <p>Free to download. Available now on iPhone, with Android on the way.</p>
-    <div class="download-row">
-      <a class="store-btn" href="https://apps.apple.com/us/app/readico/id6802690472" target="_blank" rel="noopener">
-        <small>Download on the</small>
-        <strong>App Store</strong>
-      </a>
-      <span class="store-btn soon">
-        <small>Coming soon to</small>
-        <strong>Google Play</strong>
-      </span>
+<section class="block band" id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">Three simple steps. No jargon, no fuss.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>Tell Readico about your medicines</h3><p>Speak or type your medicines, the strength and when you take them. Edit anything at any time.</p></div>
+      <div class="step"><div class="n">2</div><h3>Get reminders and check in</h3><p>Mark each dose with a tap or your voice. Readico remembers what you have taken, and when.</p></div>
+      <div class="step"><div class="n">3</div><h3>Share a clear summary</h3><p>Bring a ready-made summary to your doctor, so the visit starts from what really happened.</p></div>
     </div>
   </div>
 </section>
 
-<section id="about">
-  <div class="card">
-    <h2>About RAAG TECH</h2>
-    <p>RAAG TECH LTD is a UK-registered private limited company, building Readico as its first product. We're a small, focused team designing for people who deserve technology that's genuinely easy to use — not just technically capable.</p>
+<section class="block">
+  <div class="wrap split">
+    <div>
+      <h2>A summary your doctor can use</h2>
+      <p class="sub" style="margin-bottom:8px">Readico brings your medicines, their strength and how consistently you took them into a single page you can print or share.</p>
+      <ul class="ticks">
+        <li>Strength and timing of every medicine, including before or after food</li>
+        <li>What was taken, skipped, missed or not recorded</li>
+        <li>Symptoms you logged, with how serious they were</li>
+        <li>Questions you want to ask, all in one place</li>
+      </ul>
+      <div class="note">Readico is an organising tool. It does not diagnose, give medical advice, or replace a clinician&rsquo;s judgement. Nothing is shared unless you choose to share it.</div>
+    </div>
+    <div class="sheet" role="img" aria-label="Example of a visit summary with sample medicines">
+      <h4>Visit summary</h4>
+      <div style="color:#55596A;margin-bottom:10px">Sample data</div>
+      <div class="m"><b>Metformin</b><span>500 mg &middot; before food (08:30, 17:30)</span><br><span>13 of 14 doses taken &middot; 1 not recorded</span></div>
+      <div class="m"><b>Atorvastatin</b><span>10 mg &middot; after food (17:30)</span><br><span>7 of 7 doses taken</span></div>
+      <div class="m"><b>Insulin</b><span>20 units &middot; before food (08:00); 15 units &middot; before food (20:00)</span><br><span>14 of 14 doses taken</span></div>
+    </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Questions, feedback, or press enquiries — we'd love to hear from you.</p>
-    <a class="contact-btn" href="mailto:geethanjaligk.dev@gmail.com">geethanjaligk.dev@gmail.com</a>
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="card">
+      <h2 style="font-size:1.6rem">About RAAG TECH</h2>
+      <p style="margin:0">RAAG TECH LTD is a UK-registered private limited company, building Readico as its first product. We are a small, focused team designing for people who deserve technology that is genuinely easy to use, not just technically capable.</p>
+    </div>
   </div>
 </section>
 
-<footer>
+<section class="block" id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="card">
+      <h2 style="font-size:1.6rem">Contact</h2>
+      <p style="margin:0 0 6px">Questions, feedback or press enquiries: we would love to hear from you.</p>
+      <a class="contact-btn" href="mailto:help@raagtech.co.uk">help@raagtech.co.uk</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
   &copy; 2026 RAAG TECH LTD. All rights reserved. Registered in England and Wales, Company No. 17463581.<br>Registered office: 6 Topiary Road, Nuneaton, CV10 0FS.
 </footer>
 

@@ -5,202 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Readico for doctors | RAAG TECH LTD</title>
 <meta name="description" content="Readico is a simple medication and symptom companion for patients and carers, with a visit summary patients can bring to appointments.">
-<style>
-  :root {
-    --bg: #fafaf8;
-    --surface: #ffffff;
-    --text: #1c1c1e;
-    --text-secondary: #55555a;
-    --border: #e6e6e2;
-    --accent: #2f6f5e;
-    --accent-soft: #e7f2ee;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14161a;
-      --surface: #1c1f24;
-      --text: #f2f2f0;
-      --text-secondary: #a8aab0;
-      --border: #2a2d33;
-      --accent: #6fcbb0;
-      --accent-soft: #1f2e29;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    padding: 28px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .logo {
-    font-weight: 700;
-    font-size: 1.15rem;
-    letter-spacing: 0.02em;
-  }
-  .logo span { color: var(--accent); }
-  nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin-left: 24px;
-    font-size: 0.95rem;
-  }
-  nav a:hover { color: var(--accent); }
-
-  .hero {
-    max-width: 760px;
-    margin: 60px auto 40px;
-    padding: 0 24px;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: 2.4rem;
-    margin-bottom: 16px;
-    letter-spacing: -0.01em;
-  }
-  .hero p {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    margin-bottom: 28px;
-  }
-  .badge {
-    display: inline-block;
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 6px 14px;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-
-  section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 24px;
-  }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 32px;
-    margin-bottom: 24px;
-  }
-  h2 {
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
-  .card p { color: var(--text-secondary); }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    margin-top: 20px;
-  }
-  @media (max-width: 560px) {
-    .features { grid-template-columns: 1fr; }
-  }
-  .feature {
-    padding: 16px;
-    border-radius: 12px;
-    background: var(--accent-soft);
-  }
-  .feature h3 {
-    margin: 0 0 6px;
-    font-size: 1rem;
-    color: var(--accent);
-  }
-  .feature p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-  }
-
-  footer {
-    max-width: 800px;
-    margin: 40px auto 0;
-    padding: 24px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-  }
-  footer a { color: var(--accent); text-decoration: none; }
-
-  .contact-btn {
-    display: inline-block;
-    margin-top: 8px;
-    background: var(--accent);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .download-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 16px;
-  }
-  .store-btn {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 200px;
-    padding: 10px 20px;
-    border-radius: 12px;
-    text-decoration: none;
-    background: var(--accent);
-    color: #fff;
-    line-height: 1.25;
-  }
-  .store-btn small { font-size: 0.72rem; opacity: 0.85; }
-  .store-btn strong { font-size: 1.05rem; }
-  .store-btn.soon {
-    background: var(--accent-soft);
-    color: var(--text-secondary);
-    cursor: default;
-    border: 1px dashed var(--border);
-  }
-
-  .list { margin: 12px 0 0; padding-left: 20px; color: var(--text-secondary); }
-  .list li { margin-bottom: 8px; }
-  .note { background: var(--accent-soft); border-radius: 12px; padding: 16px; color: var(--text-secondary); font-size: 0.92rem; margin-top: 12px; }
-  nav a.current { color: var(--accent); font-weight: 600; }
-</style>
+<meta name="theme-color" content="#142A52">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="alternate icon" type="image/png" href="assets/readico-icon.png">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-
-<header>
-  <div class="logo">RAAG<span>TECH</span></div>
-  <nav>
-    <a href="/">Home</a>
-    <a class="current" href="/doctors.html">For doctors</a>
-    <a href="#recommend">Recommend</a>
-    <a href="#feedback">Feedback</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <div class="badge">Readico for doctors</div>
-  <h1>A simple companion for patients who take regular medication</h1>
-  <p>Readico helps patients and the people who care for them stay on top of medicines and symptoms, and gives you a clear picture to work from at the appointment.</p>
+<div class="top">
+  <header class="bar">
+    <a class="logo" href="/" aria-label="RAAG TECH home"><img src="assets/logo-dark.svg" alt="RAAG TECH" height="84"></a>
+    <nav class="menu">
+      <a href="/">Home</a>
+      <a class="current" href="doctors.html">For doctors</a>
+      <a href="#recommend">Recommend</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+  <div class="wrap page-hero">
+    <span class="pill">Readico for doctors</span>
+    <h1>A simple companion for patients who take regular medication</h1>
+    <p>Readico helps patients and the people who care for them stay on top of medicines and symptoms, and gives you a clear picture to work from at the appointment.</p>
+  </div>
 </div>
 
-<section>
+<main class="wrap page">
   <div class="card">
     <h2>What patients get</h2>
     <ul class="list">
@@ -230,36 +58,25 @@
     </ul>
     <div class="note">Readico is an organising tool. It does not diagnose, give medical advice, or replace a clinician&rsquo;s judgement.</div>
   </div>
-</section>
 
-<section id="recommend">
-  <div class="card">
+  <div class="card" id="recommend">
     <h2>Recommending Readico to patients</h2>
     <p>Available now on iPhone, with Android coming soon.</p>
-    <div class="download-row">
-      <a class="store-btn" href="https://apps.apple.com/us/app/readico/id6802690472" target="_blank" rel="noopener">
-        <small>Download on the</small>
-        <strong>App Store</strong>
-      </a>
-      <span class="store-btn soon">
-        <small>Coming soon to</small>
-        <strong>Google Play</strong>
-      </span>
+    <div class="cta" style="margin-top:14px">
+      <a class="btn navy" href="https://apps.apple.com/us/app/readico/id6802690472" target="_blank" rel="noopener"><small>Download on the</small><strong>App Store</strong></a>
+      <span class="btn ghost" style="color:var(--text-secondary);border-color:var(--line)"><small>Coming soon to</small><strong>Google Play</strong></span>
     </div>
   </div>
-</section>
 
-<section id="feedback">
-  <div class="card">
+  <div class="card" id="feedback">
     <h2>Tell us what would help</h2>
     <p>We are building Readico with clinicians. If there is something that would make it more useful for your patients, we would like to hear it.</p>
     <a class="contact-btn" href="mailto:help@raagtech.co.uk">help@raagtech.co.uk</a>
   </div>
-</section>
+</main>
 
-<footer>
+<footer class="foot">
   &copy; 2026 RAAG TECH LTD. All rights reserved. Registered in England and Wales, Company No. 17463581.<br>Registered office: 6 Topiary Road, Nuneaton, CV10 0FS.
 </footer>
-
 </body>
 </html>
